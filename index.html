@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Play Word Guess Game</title>  
-    <link rel="stylesheet" type="text/css" href="heylimwordgame.css">  
-</head>
+    <title>Guess Country Names!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/javascript/game.js">
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
 
 <body>
+    <header>
+        <h1>Guess <span>GHIBLI</span> Flim</h1>
+    </header>
 
  
 
+  <!-- Overall Bootstrap Grid -->
+
+    <div id = "container">
+        <div class="leftside">
+            <img src="https://d1m6vmmwsgiy3l.cloudfront.net/media/Releases/3370/3370-539430.jpg" width="100%">
+        </div>
+
+  <!--Get start-->
+        <div class="rightside">
+
+         <div id = "start-text">Press button to get started</div>
+
+           <input type="button" value="Start" onclick="
+            document.querySelector('body').style.backgroundColor='powderblue';
+           ">
+            <input type="button" value="Reset" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+           "> <br><br>
+
+         <div id = "win-text">Win</div><br><br>
+        
+         <div id = "guess-text">Guess word</div>
+         <div id = "user-text"></div>
+         <br><br>
+         
+         <div id = "remaining-text">Numbers of guess remaining</div><br><br>
+
+         <div id = "already-text">Letters already guess</div>
+
+    <script type="text/javascript">
+
+      var userText = document.getElementById("user-text");
+      document.onkeyup = function(event) {
+        userText.textContent = event.key;
+      };
+
+    
+      var film = ["t","o","t","o","r","o"];
+
+      var win = 0;
+      var guess = 0;
+      var remaining = 10;
+      var already = 0;
+
+       var computerChoice = film[Math.floor(Math.random() * film.length)];
+
+       console.log(computerChoice)
+
+      var start = document.getElementById("start-text");
+      var userGuess = document.getElementById("guess-text");
+      var computerChoice = document.getElementById("t","o","t","o","r","o");
+      var guessText = document.getElementById("guess-text");
+      var remainingText = document.getElementById("remaining-text");
+      var alreadyText = document.getElementById("already-text");
+
+   
+
+        if(userGuess === film) {
+          win++;
+        }else{
+          remaining--;
+        }
+      
+  
+        
+    
+    
+    </script>
+          
+    
+
+    </div>
 
 </body>
 

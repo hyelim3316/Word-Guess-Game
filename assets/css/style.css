@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+}
+
+span {
+    color: plum;
+}
+
+div {
+    text-align: center;
+}
+
+#container {
+    border: 5px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.leftside, .rightside {
+    border: 5px solid pink;
+}
+
+.rightside {
+    overflow: auto;
+    float: left;
+    padding: 20px;
+}
+
+.leftside {
+    float: left;
+}
+
